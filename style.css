@@ -33,7 +33,6 @@ nav{
 }
 
 .nav-menu{
-    /* width: 40%; */
     display: flex;
     align-items: center;
     justify-content:center;
@@ -119,7 +118,7 @@ main{
 
 #aboutme{
     width: 100%;
-    background-color: rgb(198, 167, 126);
+    background-color: rgb(191, 152, 100);
     height:auto;
     display: flex;
     align-self: center;
@@ -138,12 +137,12 @@ main{
 .about-card{
     width: 100%;
     background-color: rgb(146, 198, 232);
-    flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 
 .about-card-1{
     height:auto;
@@ -154,18 +153,20 @@ main{
 
 .img2{
     height:25rem;
-    width: 100%;
     background-color: rgb(34, 120, 196);
 }
 
 .about-card-2{
     height:auto;
     width: 50%;
-    min-width: 500px;
     background-color: rgb(6, 6, 78);
     padding: 2rem;
 }
 
+.about-card>div{
+    flex: 1 1 300px; 
+  min-width:400px; 
+}
 
 /* menu section */
 #menu{
