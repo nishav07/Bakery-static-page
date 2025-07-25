@@ -39,5 +39,5 @@ This is a simple static webpage created as part of my revision of HTML, CSS, and
 ---
 
 ## ✍️ Author
-- Your Name (or GitHub handle)
+- NISHAV07
 
