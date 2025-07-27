@@ -1,3 +1,39 @@
+/* animation */
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); 
+  }
+  100% {
+    transform: translateY(0); 
+  }
+}
+
+.img {
+  animation: upDown 3s ease-in-out infinite;
+}
+
+:root{
+   --text-color:rgb(33, 25, 25);
+   --bg-1: #E3F7FEff;
+   --azure-web: #E3F7FEff;
+--azure-web-2: #E3F6FEff;
+--alice-blue-2: #ECF8FEff;
+--azure-web-3: #E3F6FEff;
+--azure-web-4: #E2F7FEff;
+--azure-web-5: #E2F6FEff;
+
+}
+
+
+
+
+
+
+
 
 *{
     margin: 0;
@@ -14,6 +50,7 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
+    background-color: var(--bg-1);
 }
 
 /* NAVBAR */
@@ -34,6 +71,13 @@ nav{
     justify-content: space-between;
 }
 
+.nav-logo{
+    background-image: url("/assests/logo.png");
+    height:3rem;
+    width: 4rem;
+    background-position: center;
+    object-fit: contain;
+}
 .nav-menu{
     display: flex;
     align-items: center;
@@ -65,23 +109,21 @@ main{
     padding-left:2rem;
     padding-right:2rem;
     width: 100%;
-    /* background-color: cornflowerblue; */
 }
 
 #hero{
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    /* background-color: rgb(146, 246, 171); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    background-image: url("/assests/hero-bg.png");
 }
 
 .side1{
     flex: 1;
-    margin: 4rem;
-    background-color: chocolate;
+    max-width:45%;
     display: flex;
     align-items:self-start;
     justify-content: center;
@@ -101,6 +143,13 @@ main{
     font-size: 1.4rem;
 }
 
+.side1 button{
+    height: 3rem;
+    width: 8rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: blue;
+}
 .side2{
     flex: 1;
     display: flex;
@@ -109,12 +158,14 @@ main{
 }
 
 .img{
-    height:27rem;
-    width: 27rem;
-    border-radius: 50%;
-    background-color: aqua;
+    height:35rem;
+    width: 35rem;
+    background-image: url("/assests/bg2.png");
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 1rem;
 }
+
 
 /* about section */
 
