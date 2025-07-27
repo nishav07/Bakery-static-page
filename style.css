@@ -62,6 +62,7 @@ header{
     /* background-color: azure; */
 }
 
+
 nav{
     height: 100%;
     width: 100%;
@@ -71,10 +72,9 @@ nav{
     justify-content: space-between;
 }
 
-.nav-logo{
-    background-image: url("/assests/logo.png");
-    height:3rem;
-    width: 4rem;
+#nav-logo{
+    height:3.5rem;
+    width: 6rem;
     background-position: center;
     object-fit: contain;
 }
@@ -132,15 +132,16 @@ main{
 }
 
 .side1 h2{
-    font-size:3.5rem;
+    font-size:3.8rem;
 }
 
 .side1 h2 span{
-    color: aqua;
+    color: rgb(20, 61, 61);
 }
 
 .side1 p{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .side1 button{
@@ -148,7 +149,7 @@ main{
     width: 8rem;
     padding: 1rem;
     border-radius: 2rem;
-    background-color: blue;
+    border: 2px solid black;
 }
 .side2{
     flex: 1;
@@ -171,7 +172,6 @@ main{
 
 #aboutme{
     width: 100%;
-    background-color: rgb(191, 152, 100);
     height:auto;
     display: flex;
     align-self: center;
@@ -179,6 +179,7 @@ main{
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 2rem;
+    color: var(--text-color);
 }
 
 #aboutme h2{
@@ -189,7 +190,6 @@ main{
 
 .about-card{
     width: 100%;
-    background-color: rgb(146, 198, 232);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,16 +206,21 @@ main{
 
 .img2{
     height:25rem;
-    background-color: rgb(34, 120, 196);
+    background-image: url("/assests/about-bg.png");
+    background-size:cover;
+    border-radius: 2rem;
 }
 
 .about-card-2{
     height:auto;
-    width: 50%;
-    background-color: rgb(6, 6, 78);
+    width: 40%;
     padding: 2rem;
 }
 
+.about-card-2 p{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 .about-card>div{
     flex: 1 1 300px; 
   min-width:400px; 
