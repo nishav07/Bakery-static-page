@@ -16,24 +16,15 @@
   animation: upDown 3s ease-in-out infinite;
 }
 
-:root{
-   --text-color:rgb(33, 25, 25);
-   --bg-1: #E3F7FEff;
-   --azure-web: #E3F7FEff;
---azure-web-2: #E3F6FEff;
---alice-blue-2: #ECF8FEff;
---azure-web-3: #E3F6FEff;
---azure-web-4: #E2F7FEff;
---azure-web-5: #E2F6FEff;
-
-}
 
 html[data-theme="dark"]{
-    --bg:#
+    --bg-1:rgb(18, 33, 39);
+    --text-color:rgb(232, 220, 220);
 }
 
 html[data-theme="light"]{
-    --bg:var
+    --bg-1:rgb(192, 225, 239);
+    --text-color:rgb(33, 25, 25);
 }
 
 
@@ -59,19 +50,27 @@ html{
 }
 
 /* NAVBAR */
+
+.hero-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("assests/hero-bg.png");
+    background-position: center;
+    background-size: cover;
+    padding-left:2rem;
+    padding-right:2rem;
+}
 header{
     height:4rem;
     padding-left:2rem;
     padding-right:2rem;
     width:100%;
-    /* background-color: azure; */
 }
 
 
 nav{
     height: 100%;
     width: 100%;
-    /* background-color: aquamarine; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,12 +96,13 @@ ul{
 }
 
 ul li a{
-    color: black;
+    color: var(--text-color);
     font-size: 1.25rem;
 }
 #toggle{
     font-size:1.8rem;
-    background-color: rgb(194, 155, 231);
+    color: #555879;
+    transition: opacity 0.4s ease;
 }
 
 /* MAIN SECTION */
@@ -121,7 +121,6 @@ main{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: url("/assests/hero-bg.png");
 }
 
 .side1{
@@ -155,7 +154,6 @@ main{
     border: 2px solid black;
 }
 .side2{
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,7 +165,6 @@ main{
     background-image: url("/assests/bg2.png");
     background-position: center;
     background-repeat: no-repeat;
-    margin: 1rem;
 }
 
 
@@ -189,6 +186,7 @@ main{
     font-size: 3rem;
     text-align: center;
     padding: 2rem;
+    color: var(--text-color);
 }
 
 .about-card{
@@ -223,6 +221,7 @@ main{
 .about-card-2 p{
     font-size: 1.5rem;
     font-weight: 500;
+    color: var(--text-color);
 }
 .about-card>div{
     flex: 1 1 300px; 
