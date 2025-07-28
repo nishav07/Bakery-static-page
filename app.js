@@ -22,11 +22,11 @@ function toggle(el){
         el.classList.remove("fa-moon");
         el.classList.add("fa-sun");
         html.setAttribute("data-theme" , "dark");
-        heroContainer.style.backgroundImage = `url("assests/dark-bg.png")`;
+        heroContainer.style.backgroundImage = `url("assests/dark-bg.svg")`;
 
     } else {
         el.classList.add("fa-moon");
         html.setAttribute("data-theme" , "light");
-           heroContainer.style.backgroundImage = `url("assests/hero-bg.png")`;
+           heroContainer.style.backgroundImage = `url("assests/hero-bg.svg")`;
     }
 }

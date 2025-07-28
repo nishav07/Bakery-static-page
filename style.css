@@ -17,14 +17,26 @@
 }
 
 
+
+
 html[data-theme="dark"]{
-    --bg-1:rgb(18, 33, 39);
-    --text-color:rgb(232, 220, 220);
+  --span-color:#9c15a8;
+  --bg-color: #2B2B2B;
+  --text-color: #FBFBFB;
+  --card-color: #3e3939;
+  --primary-color: #C6E7FF;
+  --accent-color: #D4F6FF;
+  --highlight-color: #FFDDAE;
 }
 
 html[data-theme="light"]{
-    --bg-1:rgb(192, 225, 239);
-    --text-color:rgb(33, 25, 25);
+  --bg-color: #eaf3fd;
+  --primary-color: #C6E7FF;
+  --accent-color: #D4F6FF;
+  --highlight-color: #FFDDAE;
+  --text-color: #2B2B2B;
+  --card-color: #FFFFFF;
+  --span-color:#f261ff;
 }
 
 
@@ -46,7 +58,7 @@ html[data-theme="light"]{
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
-    background-color: var(--bg-1);
+    background-color: var(--bg-color);
 }
 
 /* NAVBAR */
@@ -54,7 +66,7 @@ html{
 .hero-container{
     width: 100%;
     height: 100vh;
-    background-image: url("assests/hero-bg.png");
+    background-image: url("assests/hero-bg.svg");
     background-position: center;
     background-size: cover;
     padding-left:2rem;
@@ -74,6 +86,8 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* position: sticky;
+    z-index: 1000; */
 }
 
 #nav-logo{
@@ -99,9 +113,10 @@ ul li a{
     color: var(--text-color);
     font-size: 1.25rem;
 }
+
 #toggle{
     font-size:1.8rem;
-    color: #555879;
+    color:var(--text-color);
     transition: opacity 0.4s ease;
 }
 
@@ -112,6 +127,7 @@ main{
     padding-left:2rem;
     padding-right:2rem;
     width: 100%;
+    color: var(--text-color);
 }
 
 #hero{
@@ -135,15 +151,17 @@ main{
 
 .side1 h2{
     font-size:3.8rem;
+    color: var(--text-color);
 }
 
 .side1 h2 span{
-    color: rgb(20, 61, 61);
+    color:var(--span-color);
 }
 
 .side1 p{
     font-size: 1.2rem;
     font-weight: 500;
+    color: var(--text-color);
 }
 
 .side1 button{
@@ -151,7 +169,9 @@ main{
     width: 8rem;
     padding: 1rem;
     border-radius: 2rem;
-    border: 2px solid black;
+    color: var(--text-color);
+    border: 2px solid var(--highlight-color);
+    background-color: var(--card-color);
 }
 .side2{
     display: flex;
@@ -171,6 +191,10 @@ main{
 /* about section */
 
 #aboutme{
+    background-image: url("assests/about-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: -2rem;
     width: 100%;
     height:auto;
     display: flex;
@@ -258,7 +282,7 @@ main{
     width: 30%;
     min-width:270px;
     max-width: 350px;
-    background-color:#BDDDE4;
+    background-color:var(--card-color);
     padding: 1rem;
     display: flex;
     align-items:start;
@@ -306,14 +330,14 @@ main{
     height:600px;
     width:40rem;
     min-width:300px;
-    background-color: rgb(247, 247, 195);
+    background-color:var(--card-color);
     padding: 1rem;
     display: flex;
     align-items:start;
     justify-content: center;
     flex-direction: column;
     gap: 0.5rem;
-     margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 .baker-img{
@@ -333,7 +357,7 @@ main{
 /* contact form */
 #contact{
     width: 100%;
-    background-color:#FFD6BA;
+    /* background-color:var(--card-color); */
     height:auto;
     display: flex;
     align-items: center;
@@ -359,7 +383,7 @@ main{
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
-    background-color: #555879;
+    background-color:var(--primary-color);
     border-radius: 2rem;
 }
 
@@ -368,6 +392,8 @@ main{
     height: 3rem;
     padding: 1rem;
     border-radius: 2rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 #contact textarea{
@@ -379,16 +405,17 @@ main{
     width: 8rem;
     padding: 1rem;
     border-radius: 2rem;
+    border: 3px solid var(--highlight-color);
 }
 
 /* footer */
 
 #footer{
     margin-top: 3rem;
-    padding-left:2rem;
-    padding-right:2rem;
+    padding: 2rem;
     width: 100%;
     height: auto;
+    color: var(--text-color);
 }
 
 .footer-conatiner{
@@ -409,6 +436,28 @@ main{
     gap: 2rem;
 }
 
+.footer-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.footer-compony i{
+    font-size: 1.25rem;
+}
+
+
+.footer-compony a{
+    color: var(--text-color);
+}
+.footer-compony button{
+    height: 4rem;
+    width: 10rem;
+    border-radius: 2rem;
+    color: var(--text-color);
+    border: 2px solid var(--highlight-color);
+    background-color: var(--card-color);
+}
 .quick-links {
     display: flex;
     align-items:start;
@@ -428,10 +477,11 @@ main{
 .credit{
     height: 2rem;
     width: 100%;
-    background-color:rgb(123, 239, 138);
+    /* background-color:var(--highlight-color); */
     display: flex;
     align-items: center;
     justify-content:space-between;
+    color:var(--text-color);
 }
 
 @media (max-width:700px) {
